@@ -6,7 +6,12 @@ pipeline {
             steps {
                 echo 'Hello World'
             }
-        }
+         }
+         stage('What is the date') {
+            steps {
+		sh 'date'
+	    }
+         } 
     }
     post { 
         always { 
@@ -14,3 +19,4 @@ pipeline {
         }
     }
 }
+
